@@ -4,8 +4,11 @@ import { View, Text, Image } from "react-native";
 import emptyLogo from "../../../assets/RestaurantImages/rd1.png";
 
 const RestaurantCardHalf = (props) => {
+  const { data } = props;
+
   return (
-    <View className="flex-col w-7/12 mb-3">
+    <View className="flex-col w-7/12 mb-3" {...props}>
+      {console.log(props)}
       <Image
         resizeMode="cover"
         source={emptyLogo}
